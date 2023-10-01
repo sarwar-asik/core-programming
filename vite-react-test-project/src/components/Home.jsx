@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div>
             <h2>This is Home page</h2>
-            <Link to='/single-state'>
+            <Link to='/signal-state'>
             State with  Signal  hook
             </Link>
         </div>
