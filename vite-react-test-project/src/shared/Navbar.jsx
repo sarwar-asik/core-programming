@@ -1,32 +1,43 @@
-const Navbar = () => {
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+
+function Navbar() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        background: "white",
-        border: "2px solid ",
-        borderRadius: "2%",
-        padding: "2px",
-      }}
-    >
-      <h2>Practice OOP</h2>
-      <section
-        style={{
-          display: "flex",
-          gap:"5px"
-        }}
-      >
-        <h4 className="list-group-item">Item1</h4>
-        <h4 className="list-group-item">Item2</h4>
-        <h4 className="list-group-item">Ite3</h4>
-        <h4 className="list-group-item">Item4</h4>
-      
-      </section>
-      
+    <div className={`navbar ${isDrawerOpen ? "drawer-open" : ""}`}>
+      <div className="logo">React Tech</div>
+
+      <div className="menu-icon" onClick={toggleDrawer}>
+        <div className={`bar ${isDrawerOpen ? "open" : ""}`} />
+        <div className={`bar ${isDrawerOpen ? "open" : ""}`} />
+        <div className={`bar ${isDrawerOpen ? "open" : ""}`} />
+        <div className={`bar ${isDrawerOpen ? "open" : ""}`} />
+      </div>
+
+      {/* Navigation items */}
+      <ul className={`nav-items ${isDrawerOpen ? "open" : ""}`}>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/signal-state">SIgnal</Link>
+        </li>
+        <li>
+          {" "}
+          <Link to="/">Services</Link>
+        </li>
+        <li>
+          <Link to="/">Contact</Link>
+        </li>
+      </ul>
     </div>
   );
-};
+}
 
 export default Navbar;

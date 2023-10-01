@@ -1,0 +1,35 @@
+/* CountPage.css */
+
+.count-page {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .count-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 10px;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .count-display {
+    font-size: 24px;
+    margin: 0 20px;
+    font-weight: bold;
+  }
+  

@@ -1,17 +1,12 @@
-
-import './App.css'
-import { Route, Routes } from 'react-router-dom'
-import MainLayout from './layout/MainLayout'
-
-
+import "./App.css";
+import MainLayout from "./layout/MainLayout"
 function App() {
-
-
   return (
-    <Routes>
-     <Route path='/' element={<MainLayout/>} />
-    </Routes>
-  )
+    <>
+    <MainLayout></MainLayout>
+  
+    </>
+  );
 }
 
-export default App
+export default App;
